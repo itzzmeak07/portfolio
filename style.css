@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.contact-button {
+    background-color: purple;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #ffe6f2;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: purple;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.review {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.milestones, .influencers, .gallery, .education, .technical-skills, .projects, .contact {
+    padding: 3rem 2rem;
+}
+
+.milestone-grid, .gallery-grid, .influencer-cards, .education-grid, .skills-grid, .projects-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 1rem;
+}
+
+.card, .gallery-item, .education-item, .skills-item, .projects-item {
+    background-color: #ffe6f2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card.large img, .projects-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.education-item h3, .skills-item h3, .projects-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-item p, .skills-item p, .projects-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.influencers {
+    background-color: #725193;
+    color: rgb(19, 1, 1);
+}
+
+.influencer-cards .card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.icon-link {
+    color: #ccc;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Shared Section Container Styling === */
+.education, .technical-skills, .projects {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    border-top: 2px solid #ffe6f2;
+}
+
+/* === Section Headings === */
+.education h2, .technical-skills h2, .projects h2, .gallery h2, .influencers h2, .milestones h2, .contact h2 {
+    font-size: 2.2rem;
+    color: #131010;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* === Grid Layouts === */
+.education-grid, .skills-grid, .projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* === Card Styles for All Three Sections === */
+.education-item, .skills-item, .projects-item {
+    background: #fce4ec;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #ffffff;
+    text-align: center;
+}
+
+/* === Hover Effect === */
+.education-item:hover, .skills-item:hover, .projects-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* === Headings in Cards === */
+.education-item h3, .skills-item h3, .projects-item h3 {
+    font-size: 1.4rem;
+    color: #e7679e;
+    margin-bottom: 0.5rem;
+}
+
+/* === Paragraphs in Cards === */
+.education-item p, .skills-item p, .projects-item p {
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+/* === Contact Form === */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact button {
+    padding: 0.8rem;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #5e2d91;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-item {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
